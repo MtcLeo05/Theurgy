@@ -1,0 +1,2004 @@
+{
+    "id": "theurgy:main",
+    "order": 0,
+    "unlockedEntryLayers": [
+        {
+            "type": "theurgy:image",
+            "xPos": 0,
+            "yPos": 0,
+            "width": 32,
+            "height": 24,
+            "imageWidth": 32,
+            "imageHeight": 24,
+            "image": "theurgy:textures/gui/guide_book/categories/main/bmark.png"
+        },
+        {
+            "type": "theurgy:itemstack",
+            "xPos": 12,
+            "yPos": 4,
+            "item": {
+                "id": "theurgy:theurgists_bench",
+                "count": 1
+            }
+        }
+    ],
+    "backgroundLayers": [
+        {
+            "type": "theurgy:image",
+            "xPos": 0,
+            "yPos": 0,
+            "width": 256,
+            "height": 256,
+            "image": "theurgy:textures/gui/guide_book/categories/main/bg.png"
+        },
+        {
+            "type": "theurgy:image",
+            "xPos": 0,
+            "yPos": 0,
+            "width": 256,
+            "height": 256,
+            "image": "theurgy:textures/gui/guide_book/gb_border.png"
+        }
+    ],
+    "entries": [
+        {
+            "xPos": 110,
+            "yPos": 50,
+            "id": "theurgy:main/welcome",
+            "entryTitle": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": -60,
+                    "yPos": -20,
+                    "width": 120,
+                    "height": 12,
+                    "imageWidth": 120,
+                    "imageHeight": 12,
+                    "image": "theurgy:textures/gui/guide_book/categories/c_button.png"
+                },
+                {
+                    "type": "theurgy:text",
+                    "xPos": -55,
+                    "yPos": -18,
+                    "centered": false,
+                    "shadow": false,
+                    "text": {
+                        "text": "Welcome to ",
+                        "extra": [
+                            {
+                                "text": "Theurgy",
+                                "color": "#99f8ff",
+                                "bold": true,
+                                "italic": true
+                            }
+                        ],
+                        "color": "black"
+                    }
+                }
+            ],
+            "unlockedEntryLayers": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": 0,
+                    "yPos": 0,
+                    "width": 20,
+                    "height": 20,
+                    "imageWidth": 20,
+                    "imageHeight": 20,
+                    "image": "theurgy:textures/gui/guide_book/categories/entry_enabled.png"
+                },
+                {
+                    "type": "theurgy:itemstack",
+                    "xPos": 2,
+                    "yPos": 2,
+                    "item": {
+                        "id": "theurgy:guide_book",
+                        "count": 1
+                    }
+                }
+            ],
+            "completedEntryLayers": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": 0,
+                    "yPos": 0,
+                    "width": 20,
+                    "height": 20,
+                    "imageWidth": 20,
+                    "imageHeight": 20,
+                    "image": "theurgy:textures/gui/guide_book/categories/entry_completed.png"
+                },
+                {
+                    "type": "theurgy:itemstack",
+                    "xPos": 2,
+                    "yPos": 2,
+                    "item": {
+                        "id": "theurgy:guide_book",
+                        "count": 1
+                    }
+                }
+            ],
+            "pages": [
+                {
+                    "type": "theurgy:composite",
+                    "renderables": [
+                        {
+                            "type": "theurgy:text",
+                            "xPos": 73,
+                            "yPos": 13,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "Welcome to ",
+                                "extra": [
+                                    {
+                                        "text": "Theurgy",
+                                        "color": "#99f8ff",
+                                        "bold": true,
+                                        "italic": true
+                                    }
+                                ],
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:multiline_text",
+                            "xPos": 14,
+                            "yPos": 34,
+                            "maxWidth": 116,
+                            "maxRows": 110,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "This is a alpha / tech demo for the Theurgy Mod. What you're using right now is the custom guidebook system. Right now you're in a \"page\". Do you see where the page is crumpled at the bottom? Try clicking it!",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:image",
+                            "xPos": 0,
+                            "yPos": 0,
+                            "width": 146,
+                            "height": 180,
+                            "imageWidth": 146,
+                            "imageHeight": 180,
+                            "image": "theurgy:textures/gui/guide_book/gb_page_first.png"
+                        },
+                        {
+                            "type": "theurgy:change_page_button",
+                            "xPos": 123,
+                            "yPos": 157,
+                            "width": 11,
+                            "height": 14,
+                            "nextPage": true,
+                            "layers": []
+                        }
+                    ]
+                },
+                {
+                    "type": "theurgy:composite",
+                    "renderables": [
+                        {
+                            "type": "theurgy:text",
+                            "xPos": 73,
+                            "yPos": 13,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "Welcome to ",
+                                "extra": [
+                                    {
+                                        "text": "Theurgy",
+                                        "color": "#99f8ff",
+                                        "bold": true,
+                                        "italic": true
+                                    }
+                                ],
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:text",
+                            "xPos": 218,
+                            "yPos": 13,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "Welcome to ",
+                                "extra": [
+                                    {
+                                        "text": "Theurgy",
+                                        "color": "#99f8ff",
+                                        "bold": true,
+                                        "italic": true
+                                    }
+                                ],
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:multiline_text",
+                            "xPos": 14,
+                            "yPos": 34,
+                            "maxWidth": 116,
+                            "maxRows": 110,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "That's the \"Next Page\" button! Now there should be a previous page one. Don't click it yet but continue reading... \n This is a double page. It's like a page, but double!",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:multiline_text",
+                            "xPos": 159,
+                            "yPos": 34,
+                            "maxWidth": 116,
+                            "maxRows": 110,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "You might be wondering. Am I stuck here? Fortunately, you aren't! You can r-click to close this page! But before you do that, there's one last page after this one...",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:image",
+                            "xPos": 0,
+                            "yPos": 0,
+                            "width": 291,
+                            "height": 180,
+                            "imageWidth": 291,
+                            "imageHeight": 180,
+                            "image": "theurgy:textures/gui/guide_book/gb_page_double.png"
+                        },
+                        {
+                            "type": "theurgy:change_page_button",
+                            "xPos": 13,
+                            "yPos": 157,
+                            "width": 11,
+                            "height": 14,
+                            "nextPage": false,
+                            "layers": []
+                        },
+                        {
+                            "type": "theurgy:change_page_button",
+                            "xPos": 268,
+                            "yPos": 157,
+                            "width": 11,
+                            "height": 14,
+                            "nextPage": true,
+                            "layers": []
+                        }
+                    ]
+                },
+                {
+                    "type": "theurgy:composite",
+                    "renderables": [
+                        {
+                            "type": "theurgy:text",
+                            "xPos": 73,
+                            "yPos": 13,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "Welcome to ",
+                                "extra": [
+                                    {
+                                        "text": "Theurgy",
+                                        "color": "#99f8ff",
+                                        "bold": true,
+                                        "italic": true
+                                    }
+                                ],
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:multiline_text",
+                            "xPos": 14,
+                            "yPos": 34,
+                            "maxWidth": 116,
+                            "maxRows": 110,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "That being the last page. What a shocker amirite. Every entry can be completed, and this will give access to those that depend on it. Some entries might need some requirements before being completed",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:image",
+                            "xPos": 0,
+                            "yPos": 0,
+                            "width": 146,
+                            "height": 180,
+                            "imageWidth": 146,
+                            "imageHeight": 180,
+                            "image": "theurgy:textures/gui/guide_book/gb_page_last.png"
+                        },
+                        {
+                            "type": "theurgy:change_page_button",
+                            "xPos": 13,
+                            "yPos": 157,
+                            "width": 11,
+                            "height": 14,
+                            "nextPage": false,
+                            "layers": []
+                        },
+                        {
+                            "type": "theurgy:complete_entry_button",
+                            "xPos": 43,
+                            "yPos": 130,
+                            "width": 60,
+                            "height": 12,
+                            "layers": [
+                                {
+                                    "type": "theurgy:image",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "width": 60,
+                                    "height": 12,
+                                    "imageWidth": 60,
+                                    "imageHeight": 12,
+                                    "image": "theurgy:textures/gui/guide_book/categories/c_button.png"
+                                },
+                                {
+                                    "type": "theurgy:text",
+                                    "xPos": 9,
+                                    "yPos": 2,
+                                    "centered": false,
+                                    "shadow": false,
+                                    "text": {
+                                        "text": "Complete",
+                                        "color": "black"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "xPos": 110,
+            "yPos": 100,
+            "id": "theurgy:main/what_the_hell_is_a_tech_demo",
+            "entryTitle": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": -30,
+                    "yPos": -20,
+                    "width": 60,
+                    "height": 12,
+                    "imageWidth": 60,
+                    "imageHeight": 12,
+                    "image": "theurgy:textures/gui/guide_book/categories/c_button.png"
+                },
+                {
+                    "type": "theurgy:text",
+                    "xPos": -27,
+                    "yPos": -18,
+                    "centered": false,
+                    "shadow": false,
+                    "text": {
+                        "text": "Tech Demo",
+                        "color": "black"
+                    }
+                }
+            ],
+            "dependencies": [
+                "theurgy:main/welcome"
+            ],
+            "lockedEntryLayers": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": 0,
+                    "yPos": 0,
+                    "width": 20,
+                    "height": 20,
+                    "imageWidth": 20,
+                    "imageHeight": 20,
+                    "image": "theurgy:textures/gui/guide_book/categories/entry_disabled.png"
+                },
+                {
+                    "type": "theurgy:itemstack",
+                    "xPos": 2,
+                    "yPos": 2,
+                    "item": {
+                        "id": "theurgy:guide_book",
+                        "count": 1
+                    }
+                }
+            ],
+            "unlockedEntryLayers": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": 0,
+                    "yPos": 0,
+                    "width": 20,
+                    "height": 20,
+                    "imageWidth": 20,
+                    "imageHeight": 20,
+                    "image": "theurgy:textures/gui/guide_book/categories/entry_enabled.png"
+                },
+                {
+                    "type": "theurgy:itemstack",
+                    "xPos": 2,
+                    "yPos": 2,
+                    "item": {
+                        "id": "theurgy:guide_book",
+                        "count": 1
+                    }
+                }
+            ],
+            "completedEntryLayers": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": 0,
+                    "yPos": 0,
+                    "width": 20,
+                    "height": 20,
+                    "imageWidth": 20,
+                    "imageHeight": 20,
+                    "image": "theurgy:textures/gui/guide_book/categories/entry_completed.png"
+                },
+                {
+                    "type": "theurgy:itemstack",
+                    "xPos": 2,
+                    "yPos": 2,
+                    "item": {
+                        "id": "theurgy:guide_book",
+                        "count": 1
+                    }
+                }
+            ],
+            "pages": [
+                {
+                    "type": "theurgy:composite",
+                    "renderables": [
+                        {
+                            "type": "theurgy:text",
+                            "xPos": 73,
+                            "yPos": 13,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "Tech Demo?",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:multiline_text",
+                            "xPos": 14,
+                            "yPos": 34,
+                            "maxWidth": 116,
+                            "maxRows": 110,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "Now you might be wondering, why tech demo? Why not alpha? \n The reason is simple. I am not satisfied yet with the amount of content in this version to call it a proper alpha. \n This is more of a showcase of something I've been working on",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:image",
+                            "xPos": 0,
+                            "yPos": 0,
+                            "width": 146,
+                            "height": 180,
+                            "imageWidth": 146,
+                            "imageHeight": 180,
+                            "image": "theurgy:textures/gui/guide_book/gb_page_first.png"
+                        },
+                        {
+                            "type": "theurgy:complete_entry_button",
+                            "xPos": 43,
+                            "yPos": 145,
+                            "width": 60,
+                            "height": 12,
+                            "layers": [
+                                {
+                                    "type": "theurgy:image",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "width": 60,
+                                    "height": 12,
+                                    "imageWidth": 60,
+                                    "imageHeight": 12,
+                                    "image": "theurgy:textures/gui/guide_book/categories/c_button.png"
+                                },
+                                {
+                                    "type": "theurgy:text",
+                                    "xPos": 9,
+                                    "yPos": 2,
+                                    "centered": false,
+                                    "shadow": false,
+                                    "text": {
+                                        "text": "Complete",
+                                        "color": "black"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "xPos": 110,
+            "yPos": 150,
+            "id": "theurgy:main/getting_started",
+            "entryTitle": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": -30,
+                    "yPos": -20,
+                    "width": 82,
+                    "height": 12,
+                    "imageWidth": 82,
+                    "imageHeight": 12,
+                    "image": "theurgy:textures/gui/guide_book/categories/c_button.png"
+                },
+                {
+                    "type": "theurgy:text",
+                    "xPos": -27,
+                    "yPos": -18,
+                    "centered": false,
+                    "shadow": false,
+                    "text": {
+                        "text": "Getting Started",
+                        "color": "black"
+                    }
+                }
+            ],
+            "dependencies": [
+                "theurgy:main/what_the_hell_is_a_tech_demo"
+            ],
+            "lockedEntryLayers": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": 0,
+                    "yPos": 0,
+                    "width": 20,
+                    "height": 20,
+                    "imageWidth": 20,
+                    "imageHeight": 20,
+                    "image": "theurgy:textures/gui/guide_book/categories/entry_disabled.png"
+                },
+                {
+                    "type": "theurgy:itemstack",
+                    "xPos": 2,
+                    "yPos": 2,
+                    "item": {
+                        "id": "theurgy:greatwood_log",
+                        "count": 1
+                    }
+                }
+            ],
+            "unlockedEntryLayers": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": 0,
+                    "yPos": 0,
+                    "width": 20,
+                    "height": 20,
+                    "imageWidth": 20,
+                    "imageHeight": 20,
+                    "image": "theurgy:textures/gui/guide_book/categories/entry_enabled.png"
+                },
+                {
+                    "type": "theurgy:itemstack",
+                    "xPos": 2,
+                    "yPos": 2,
+                    "item": {
+                        "id": "theurgy:greatwood_log",
+                        "count": 1
+                    }
+                }
+            ],
+            "completedEntryLayers": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": 0,
+                    "yPos": 0,
+                    "width": 20,
+                    "height": 20,
+                    "imageWidth": 20,
+                    "imageHeight": 20,
+                    "image": "theurgy:textures/gui/guide_book/categories/entry_completed.png"
+                },
+                {
+                    "type": "theurgy:itemstack",
+                    "xPos": 2,
+                    "yPos": 2,
+                    "item": {
+                        "id": "theurgy:greatwood_log",
+                        "count": 1
+                    }
+                }
+            ],
+            "pages": [
+                {
+                    "type": "theurgy:composite",
+                    "renderables": [
+                        {
+                            "type": "theurgy:text",
+                            "xPos": 73,
+                            "yPos": 13,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "Getting Started",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:multiline_text",
+                            "xPos": 14,
+                            "yPos": 24,
+                            "maxWidth": 116,
+                            "maxRows": 110,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "\nTheurgy\n\n",
+                                "color": "#99f8ff",
+                                "bold": true,
+                                "italic": true,
+                                "extra": [
+                                    {
+                                        "text": "The use of magical forces to manifest a change in the world. \nThis book, written by none other than the first researcher of Theurgy [me], will accompany you through your journey to become a competent Theurgist",
+                                        "color": "black",
+                                        "bold": false,
+                                        "italic": false
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "theurgy:image",
+                            "xPos": 0,
+                            "yPos": 0,
+                            "width": 146,
+                            "height": 180,
+                            "imageWidth": 146,
+                            "imageHeight": 180,
+                            "image": "theurgy:textures/gui/guide_book/gb_page_first.png"
+                        },
+                        {
+                            "type": "theurgy:change_page_button",
+                            "xPos": 123,
+                            "yPos": 157,
+                            "width": 11,
+                            "height": 14,
+                            "nextPage": true,
+                            "layers": []
+                        }
+                    ]
+                },
+                {
+                    "type": "theurgy:composite",
+                    "renderables": [
+                        {
+                            "type": "theurgy:text",
+                            "xPos": 73,
+                            "yPos": 13,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "Getting Started",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:text",
+                            "xPos": 218,
+                            "yPos": 13,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "Getting Started",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:multiline_text",
+                            "xPos": 14,
+                            "yPos": 34,
+                            "maxWidth": 116,
+                            "maxRows": 110,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "In this world there's a force present, called ",
+                                "extra": [
+                                    {
+                                        "text": "Magic-Ions",
+                                        "color": "#99f8ff",
+                                        "bold": true,
+                                        "italic": true
+                                    },
+                                    {
+                                        "text": ", although they are commonly referred to as \"mions\". \nThese mions are everywhere, but in some parts of the world they tend to gather more. These places are what we call \"Magical Forest\"",
+                                        "color": "black",
+                                        "bold": false,
+                                        "italic": false
+                                    }
+                                ],
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:multiline_text",
+                            "xPos": 159,
+                            "yPos": 34,
+                            "maxWidth": 116,
+                            "maxRows": 110,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "But don't be fooled, as the mions don't settle just in the surface. \nSometimes underground you might find crystals encased in stone, formed of mions crystallized by the underground pressure.\nThese crystals seem to randomly attune to one of the 6 elemental ",
+                                "color": "black",
+                                "extra": [
+                                    {
+                                        "text": "Aspectuses",
+                                        "color": "red",
+                                        "bold": true
+                                    },
+                                    {
+                                        "text": ".",
+                                        "color": "black"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "theurgy:image",
+                            "xPos": 0,
+                            "yPos": 0,
+                            "width": 291,
+                            "height": 180,
+                            "imageWidth": 291,
+                            "imageHeight": 180,
+                            "image": "theurgy:textures/gui/guide_book/gb_page_double.png"
+                        },
+                        {
+                            "type": "theurgy:change_page_button",
+                            "xPos": 13,
+                            "yPos": 157,
+                            "width": 11,
+                            "height": 14,
+                            "nextPage": false,
+                            "layers": []
+                        },
+                        {
+                            "type": "theurgy:change_page_button",
+                            "xPos": 268,
+                            "yPos": 157,
+                            "width": 11,
+                            "height": 14,
+                            "nextPage": true,
+                            "layers": []
+                        }
+                    ]
+                },
+                {
+                    "type": "theurgy:composite",
+                    "renderables": [
+                        {
+                            "type": "theurgy:text",
+                            "xPos": 73,
+                            "yPos": 13,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "Getting Started",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:text",
+                            "xPos": 218,
+                            "yPos": 13,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "Getting Started",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:multiline_text",
+                            "xPos": 14,
+                            "yPos": 34,
+                            "maxWidth": 116,
+                            "maxRows": 110,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "But what are these ",
+                                "extra": [
+                                    {
+                                        "text": "Aspectuses",
+                                        "color": "red",
+                                        "bold": true
+                                    },
+                                    {
+                                        "text": "?",
+                                        "color": "black"
+                                    },
+                                    {
+                                        "text": "\nThey are the \"physical\" form of the 4 common elements: \n",
+                                        "color": "black"
+                                    },
+                                    {
+                                        "text": "[Terra]: Earth\n",
+                                        "color": "#21ba02"
+                                    },
+                                    {
+                                        "text": "[Ignis]: Fire\n",
+                                        "color": "#fc6f03"
+                                    },
+                                    {
+                                        "text": "[Aqua]: Water\n",
+                                        "color": "#00d0ff"
+                                    },
+                                    {
+                                        "text": "[Aer]: Air\n",
+                                        "color": "#a5b661"
+                                    },
+                                    {
+                                        "text": "You might say: \n\"4? Didn't you say 6?\"",
+                                        "color": "black"
+                                    }
+                                ],
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:multiline_text",
+                            "xPos": 159,
+                            "yPos": 34,
+                            "maxWidth": 116,
+                            "maxRows": 110,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "That's right, they are 6. The last 2 are not something we commonly call elements, but are present throughout the entire world:\n",
+                                "color": "black",
+                                "extra": [
+                                    {
+                                        "text": "[Ordo]: Order / Creation\n",
+                                        "color": "#bababa"
+                                    },
+                                    {
+                                        "text": "[Perditio]: Disorder / Destruction\n",
+                                        "color": "#242424"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "theurgy:image",
+                            "xPos": 0,
+                            "yPos": 0,
+                            "width": 291,
+                            "height": 180,
+                            "imageWidth": 291,
+                            "imageHeight": 180,
+                            "image": "theurgy:textures/gui/guide_book/gb_page_double.png"
+                        },
+                        {
+                            "type": "theurgy:change_page_button",
+                            "xPos": 13,
+                            "yPos": 157,
+                            "width": 11,
+                            "height": 14,
+                            "nextPage": false,
+                            "layers": []
+                        },
+                        {
+                            "type": "theurgy:complete_entry_button",
+                            "xPos": 188,
+                            "yPos": 130,
+                            "width": 60,
+                            "height": 12,
+                            "layers": [
+                                {
+                                    "type": "theurgy:image",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "width": 60,
+                                    "height": 12,
+                                    "imageWidth": 60,
+                                    "imageHeight": 12,
+                                    "image": "theurgy:textures/gui/guide_book/categories/c_button.png"
+                                },
+                                {
+                                    "type": "theurgy:text",
+                                    "xPos": 9,
+                                    "yPos": 2,
+                                    "centered": false,
+                                    "shadow": false,
+                                    "text": {
+                                        "text": "Complete",
+                                        "color": "black"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "xPos": 90,
+            "yPos": 190,
+            "id": "theurgy:main/aspectus_ores",
+            "entryTitle": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": -30,
+                    "yPos": -20,
+                    "width": 82,
+                    "height": 12,
+                    "imageWidth": 82,
+                    "imageHeight": 12,
+                    "image": "theurgy:textures/gui/guide_book/categories/c_button.png"
+                },
+                {
+                    "type": "theurgy:text",
+                    "xPos": -27,
+                    "yPos": -18,
+                    "centered": false,
+                    "shadow": false,
+                    "text": {
+                        "text": "Aspectus Ores",
+                        "color": "black"
+                    }
+                }
+            ],
+            "dependencies": [
+                "theurgy:main/getting_started"
+            ],
+            "lockedEntryLayers": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": 0,
+                    "yPos": 0,
+                    "width": 20,
+                    "height": 20,
+                    "imageWidth": 20,
+                    "imageHeight": 20,
+                    "image": "theurgy:textures/gui/guide_book/categories/entry_disabled.png"
+                },
+                {
+                    "type": "theurgy:itemstack",
+                    "xPos": 2,
+                    "yPos": 2,
+                    "item": {
+                        "id": "theurgy:ignis_ore",
+                        "count": 1
+                    }
+                }
+            ],
+            "unlockedEntryLayers": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": 0,
+                    "yPos": 0,
+                    "width": 20,
+                    "height": 20,
+                    "imageWidth": 20,
+                    "imageHeight": 20,
+                    "image": "theurgy:textures/gui/guide_book/categories/entry_enabled.png"
+                },
+                {
+                    "type": "theurgy:itemstack",
+                    "xPos": 2,
+                    "yPos": 2,
+                    "item": {
+                        "id": "theurgy:ignis_ore",
+                        "count": 1
+                    }
+                }
+            ],
+            "completedEntryLayers": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": 0,
+                    "yPos": 0,
+                    "width": 20,
+                    "height": 20,
+                    "imageWidth": 20,
+                    "imageHeight": 20,
+                    "image": "theurgy:textures/gui/guide_book/categories/entry_completed.png"
+                },
+                {
+                    "type": "theurgy:itemstack",
+                    "xPos": 2,
+                    "yPos": 2,
+                    "item": {
+                        "id": "theurgy:ignis_ore",
+                        "count": 1
+                    }
+                }
+            ],
+            "pages": [
+                {
+                    "type": "theurgy:composite",
+                    "renderables": [
+                        {
+                            "type": "theurgy:text",
+                            "xPos": 73,
+                            "yPos": 13,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "Aspectus Ores",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:multiline_text",
+                            "xPos": 14,
+                            "yPos": 24,
+                            "maxWidth": 116,
+                            "maxRows": 110,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "Like previously mentioned, while exploring the underground region of a magical forest you might encounter aspectus ores.\n During my researches I was not able to find a relation between where the crystallization happened, and what type of aspectus was created, but I did figure something out...",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:image",
+                            "xPos": 0,
+                            "yPos": 0,
+                            "width": 146,
+                            "height": 180,
+                            "imageWidth": 146,
+                            "imageHeight": 180,
+                            "image": "theurgy:textures/gui/guide_book/gb_page_first.png"
+                        },
+                        {
+                            "type": "theurgy:change_page_button",
+                            "xPos": 123,
+                            "yPos": 157,
+                            "width": 11,
+                            "height": 14,
+                            "nextPage": true,
+                            "layers": []
+                        }
+                    ]
+                },
+                {
+                    "type": "theurgy:composite",
+                    "renderables": [
+                        {
+                            "type": "theurgy:text",
+                            "xPos": 73,
+                            "yPos": 13,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "Aspectus Ores",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:multiline_text",
+                            "xPos": 14,
+                            "yPos": 34,
+                            "maxWidth": 116,
+                            "maxRows": 110,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "... That being that Magical Forests themselves are found nearer cold places, and are quite rare near hot places. Having a second page was totally for suspense, not because I didn't have enough space. Absolutely.",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:image",
+                            "xPos": 0,
+                            "yPos": 0,
+                            "width": 146,
+                            "height": 180,
+                            "imageWidth": 146,
+                            "imageHeight": 180,
+                            "image": "theurgy:textures/gui/guide_book/gb_page_last.png"
+                        },
+                        {
+                            "type": "theurgy:change_page_button",
+                            "xPos": 13,
+                            "yPos": 157,
+                            "width": 11,
+                            "height": 14,
+                            "nextPage": false,
+                            "layers": []
+                        },
+                        {
+                            "type": "theurgy:complete_entry_button",
+                            "xPos": 43,
+                            "yPos": 140,
+                            "width": 60,
+                            "height": 12,
+                            "layers": [
+                                {
+                                    "type": "theurgy:image",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "width": 60,
+                                    "height": 12,
+                                    "imageWidth": 60,
+                                    "imageHeight": 12,
+                                    "image": "theurgy:textures/gui/guide_book/categories/c_button.png"
+                                },
+                                {
+                                    "type": "theurgy:text",
+                                    "xPos": 9,
+                                    "yPos": 2,
+                                    "centered": false,
+                                    "shadow": false,
+                                    "text": {
+                                        "text": "Complete",
+                                        "color": "black"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "xPos": 130,
+            "yPos": 190,
+            "id": "theurgy:main/aspectus_geodes",
+            "entryTitle": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": -30,
+                    "yPos": -20,
+                    "width": 92,
+                    "height": 12,
+                    "imageWidth": 92,
+                    "imageHeight": 12,
+                    "image": "theurgy:textures/gui/guide_book/categories/c_button.png"
+                },
+                {
+                    "type": "theurgy:text",
+                    "xPos": -27,
+                    "yPos": -18,
+                    "centered": false,
+                    "shadow": false,
+                    "text": {
+                        "text": "Aspectus Geodes",
+                        "color": "black"
+                    }
+                }
+            ],
+            "dependencies": [
+                "theurgy:main/getting_started"
+            ],
+            "lockedEntryLayers": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": 0,
+                    "yPos": 0,
+                    "width": 20,
+                    "height": 20,
+                    "imageWidth": 20,
+                    "imageHeight": 20,
+                    "image": "theurgy:textures/gui/guide_book/categories/entry_disabled.png"
+                },
+                {
+                    "type": "theurgy:itemstack",
+                    "xPos": 2,
+                    "yPos": 2,
+                    "item": {
+                        "id": "theurgy:ignis_geode",
+                        "count": 1
+                    }
+                }
+            ],
+            "unlockedEntryLayers": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": 0,
+                    "yPos": 0,
+                    "width": 20,
+                    "height": 20,
+                    "imageWidth": 20,
+                    "imageHeight": 20,
+                    "image": "theurgy:textures/gui/guide_book/categories/entry_enabled.png"
+                },
+                {
+                    "type": "theurgy:itemstack",
+                    "xPos": 2,
+                    "yPos": 2,
+                    "item": {
+                        "id": "theurgy:ignis_geode",
+                        "count": 1
+                    }
+                }
+            ],
+            "completedEntryLayers": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": 0,
+                    "yPos": 0,
+                    "width": 20,
+                    "height": 20,
+                    "imageWidth": 20,
+                    "imageHeight": 20,
+                    "image": "theurgy:textures/gui/guide_book/categories/entry_completed.png"
+                },
+                {
+                    "type": "theurgy:itemstack",
+                    "xPos": 2,
+                    "yPos": 2,
+                    "item": {
+                        "id": "theurgy:ignis_geode",
+                        "count": 1
+                    }
+                }
+            ],
+            "pages": [
+                {
+                    "type": "theurgy:composite",
+                    "renderables": [
+                        {
+                            "type": "theurgy:text",
+                            "xPos": 73,
+                            "yPos": 13,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "Aspectus Geodes",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:multiline_text",
+                            "xPos": 14,
+                            "yPos": 24,
+                            "maxWidth": 116,
+                            "maxRows": 110,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "After continuing my research on Aspectus Ores, I was actually able to figure out some things.\nThe ores themselves are quite fragile, and nothing is able to harvest them directly, not even the softest of touch. Breaking them will only yield aspectus crystals, that while useful aren't as good as the ore itself.",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:image",
+                            "xPos": 0,
+                            "yPos": 0,
+                            "width": 146,
+                            "height": 180,
+                            "imageWidth": 146,
+                            "imageHeight": 180,
+                            "image": "theurgy:textures/gui/guide_book/gb_page_first.png"
+                        },
+                        {
+                            "type": "theurgy:change_page_button",
+                            "xPos": 123,
+                            "yPos": 157,
+                            "width": 11,
+                            "height": 14,
+                            "nextPage": true,
+                            "layers": []
+                        }
+                    ]
+                },
+                {
+                    "type": "theurgy:composite",
+                    "renderables": [
+                        {
+                            "type": "theurgy:text",
+                            "xPos": 73,
+                            "yPos": 13,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "Aspectus Ores",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:multiline_text",
+                            "xPos": 14,
+                            "yPos": 34,
+                            "maxWidth": 116,
+                            "maxRows": 110,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "You might be wondering why. That's where the second discovery comes. While breaking the ores will yield crystals, if left alone they will, albeit slowly, produce geodes. \nThese geodes will yield less crystals when broken, but an ore can produce seemingly infinite amount of geodes.",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:multiline_text",
+                            "xPos": 159,
+                            "yPos": 34,
+                            "maxWidth": 116,
+                            "maxRows": 110,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "These geodes seem to be more resistant than the ores, and can be obtained when being careful [Silk Touch]",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:image",
+                            "xPos": 0,
+                            "yPos": 0,
+                            "width": 291,
+                            "height": 180,
+                            "imageWidth": 291,
+                            "imageHeight": 180,
+                            "image": "theurgy:textures/gui/guide_book/gb_page_double.png"
+                        },
+                        {
+                            "type": "theurgy:change_page_button",
+                            "xPos": 13,
+                            "yPos": 157,
+                            "width": 11,
+                            "height": 14,
+                            "nextPage": false,
+                            "layers": []
+                        },
+                        {
+                            "type": "theurgy:complete_research_button",
+                            "xPos": 188,
+                            "yPos": 140,
+                            "width": 60,
+                            "height": 12,
+                            "layers": [
+                                {
+                                    "type": "theurgy:image",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "width": 60,
+                                    "height": 12,
+                                    "imageWidth": 60,
+                                    "imageHeight": 12,
+                                    "image": "theurgy:textures/gui/guide_book/categories/c_button.png"
+                                },
+                                {
+                                    "type": "theurgy:text",
+                                    "xPos": 9,
+                                    "yPos": 2,
+                                    "centered": false,
+                                    "shadow": false,
+                                    "text": {
+                                        "text": "Complete",
+                                        "color": "black"
+                                    }
+                                }
+                            ],
+                            "research": [
+                                "theurgy:guidebook/main/aer_crystal",
+                                "theurgy:guidebook/main/aqua_crystal",
+                                "theurgy:guidebook/main/ignis_crystal",
+                                "theurgy:guidebook/main/ordo_crystal",
+                                "theurgy:guidebook/main/perditio_crystal",
+                                "theurgy:guidebook/main/terra_crystal"
+                            ]
+                        },
+                        {
+                            "type": "theurgy:research_conditional",
+                            "xPos": 158,
+                            "yPos": 105,
+                            "research": [
+                                "theurgy:guidebook/main/aer_crystal"
+                            ],
+                            "incomplete": [
+                                {
+                                    "type": "theurgy:itemstack",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "item": {
+                                        "id": "theurgy:mion_crystal",
+                                        "count": 1,
+                                        "components": {
+                                            "theurgy:aspectus_holder": {
+                                                "aspectus": "theurgy:aer",
+                                                "amount": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "complete": [
+                                {
+                                    "type": "theurgy:itemstack",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "item": {
+                                        "id": "theurgy:mion_crystal",
+                                        "count": 1,
+                                        "components": {
+                                            "theurgy:aspectus_holder": {
+                                                "aspectus": "theurgy:aer",
+                                                "amount": 1
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "theurgy:image",
+                                    "image": "minecraft:textures/gui/sprites/icon/checkmark.png",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "width": 9,
+                                    "height": 8,
+                                    "imageWidth": 9,
+                                    "imageHeight": 8
+                                }
+                            ]
+                        },
+                        {
+                            "type": "theurgy:research_conditional",
+                            "xPos": 178,
+                            "yPos": 105,
+                            "research": [
+                                "theurgy:guidebook/main/aqua_crystal"
+                            ],
+                            "incomplete": [
+                                {
+                                    "type": "theurgy:itemstack",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "item": {
+                                        "id": "theurgy:mion_crystal",
+                                        "count": 1,
+                                        "components": {
+                                            "theurgy:aspectus_holder": {
+                                                "aspectus": "theurgy:aqua",
+                                                "amount": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "complete": [
+                                {
+                                    "type": "theurgy:itemstack",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "item": {
+                                        "id": "theurgy:mion_crystal",
+                                        "count": 1,
+                                        "components": {
+                                            "theurgy:aspectus_holder": {
+                                                "aspectus": "theurgy:aqua",
+                                                "amount": 1
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "theurgy:image",
+                                    "image": "minecraft:textures/gui/sprites/icon/checkmark.png",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "width": 9,
+                                    "height": 8,
+                                    "imageWidth": 9,
+                                    "imageHeight": 8
+                                }
+                            ]
+                        },
+                        {
+                            "type": "theurgy:research_conditional",
+                            "xPos": 198,
+                            "yPos": 105,
+                            "research": [
+                                "theurgy:guidebook/main/ignis_crystal"
+                            ],
+                            "incomplete": [
+                                {
+                                    "type": "theurgy:itemstack",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "item": {
+                                        "id": "theurgy:mion_crystal",
+                                        "count": 1,
+                                        "components": {
+                                            "theurgy:aspectus_holder": {
+                                                "aspectus": "theurgy:ignis",
+                                                "amount": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "complete": [
+                                {
+                                    "type": "theurgy:itemstack",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "item": {
+                                        "id": "theurgy:mion_crystal",
+                                        "count": 1,
+                                        "components": {
+                                            "theurgy:aspectus_holder": {
+                                                "aspectus": "theurgy:ignis",
+                                                "amount": 1
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "theurgy:image",
+                                    "image": "minecraft:textures/gui/sprites/icon/checkmark.png",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "width": 9,
+                                    "height": 8,
+                                    "imageWidth": 9,
+                                    "imageHeight": 8
+                                }
+                            ]
+                        },
+                        {
+                            "type": "theurgy:research_conditional",
+                            "xPos": 218,
+                            "yPos": 105,
+                            "research": [
+                                "theurgy:guidebook/main/ordo_crystal"
+                            ],
+                            "incomplete": [
+                                {
+                                    "type": "theurgy:itemstack",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "item": {
+                                        "id": "theurgy:mion_crystal",
+                                        "count": 1,
+                                        "components": {
+                                            "theurgy:aspectus_holder": {
+                                                "aspectus": "theurgy:ordo",
+                                                "amount": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "complete": [
+                                {
+                                    "type": "theurgy:itemstack",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "item": {
+                                        "id": "theurgy:mion_crystal",
+                                        "count": 1,
+                                        "components": {
+                                            "theurgy:aspectus_holder": {
+                                                "aspectus": "theurgy:ordo",
+                                                "amount": 1
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "theurgy:image",
+                                    "image": "minecraft:textures/gui/sprites/icon/checkmark.png",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "width": 9,
+                                    "height": 8,
+                                    "imageWidth": 9,
+                                    "imageHeight": 8
+                                }
+                            ]
+                        },
+                        {
+                            "type": "theurgy:research_conditional",
+                            "xPos": 238,
+                            "yPos": 105,
+                            "research": [
+                                "theurgy:guidebook/main/perditio_crystal"
+                            ],
+                            "incomplete": [
+                                {
+                                    "type": "theurgy:itemstack",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "item": {
+                                        "id": "theurgy:mion_crystal",
+                                        "count": 1,
+                                        "components": {
+                                            "theurgy:aspectus_holder": {
+                                                "aspectus": "theurgy:perditio",
+                                                "amount": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "complete": [
+                                {
+                                    "type": "theurgy:itemstack",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "item": {
+                                        "id": "theurgy:mion_crystal",
+                                        "count": 1,
+                                        "components": {
+                                            "theurgy:aspectus_holder": {
+                                                "aspectus": "theurgy:perditio",
+                                                "amount": 1
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "theurgy:image",
+                                    "image": "minecraft:textures/gui/sprites/icon/checkmark.png",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "width": 9,
+                                    "height": 8,
+                                    "imageWidth": 9,
+                                    "imageHeight": 8
+                                }
+                            ]
+                        },
+                        {
+                            "type": "theurgy:research_conditional",
+                            "xPos": 258,
+                            "yPos": 105,
+                            "research": [
+                                "theurgy:guidebook/main/terra_crystal"
+                            ],
+                            "incomplete": [
+                                {
+                                    "type": "theurgy:itemstack",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "item": {
+                                        "id": "theurgy:mion_crystal",
+                                        "count": 1,
+                                        "components": {
+                                            "theurgy:aspectus_holder": {
+                                                "aspectus": "theurgy:terra",
+                                                "amount": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "complete": [
+                                {
+                                    "type": "theurgy:itemstack",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "item": {
+                                        "id": "theurgy:mion_crystal",
+                                        "count": 1,
+                                        "components": {
+                                            "theurgy:aspectus_holder": {
+                                                "aspectus": "theurgy:terra",
+                                                "amount": 1
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "theurgy:image",
+                                    "image": "minecraft:textures/gui/sprites/icon/checkmark.png",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "width": 9,
+                                    "height": 8,
+                                    "imageWidth": 9,
+                                    "imageHeight": 8
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "xPos": 110,
+            "yPos": 220,
+            "id": "theurgy:main/theurgists_bench",
+            "entryTitle": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": -32,
+                    "yPos": -20,
+                    "width": 97,
+                    "height": 12,
+                    "imageWidth": 97,
+                    "imageHeight": 12,
+                    "image": "theurgy:textures/gui/guide_book/categories/c_button.png"
+                },
+                {
+                    "type": "theurgy:text",
+                    "xPos": -27,
+                    "yPos": -18,
+                    "centered": false,
+                    "shadow": false,
+                    "text": {
+                        "text": "Theurgist's Bench",
+                        "color": "black"
+                    }
+                }
+            ],
+            "dependencies": [
+                "theurgy:main/aspectus_ores",
+                "theurgy:main/aspectus_geodes"
+            ],
+            "lockedEntryLayers": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": 0,
+                    "yPos": 0,
+                    "width": 20,
+                    "height": 20,
+                    "imageWidth": 20,
+                    "imageHeight": 20,
+                    "image": "theurgy:textures/gui/guide_book/categories/entry_disabled.png"
+                },
+                {
+                    "type": "theurgy:itemstack",
+                    "xPos": 2,
+                    "yPos": 2,
+                    "item": {
+                        "id": "theurgy:theurgists_bench",
+                        "count": 1
+                    }
+                }
+            ],
+            "unlockedEntryLayers": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": 0,
+                    "yPos": 0,
+                    "width": 20,
+                    "height": 20,
+                    "imageWidth": 20,
+                    "imageHeight": 20,
+                    "image": "theurgy:textures/gui/guide_book/categories/entry_enabled.png"
+                },
+                {
+                    "type": "theurgy:itemstack",
+                    "xPos": 2,
+                    "yPos": 2,
+                    "item": {
+                        "id": "theurgy:theurgists_bench",
+                        "count": 1
+                    }
+                }
+            ],
+            "completedEntryLayers": [
+                {
+                    "type": "theurgy:image",
+                    "xPos": 0,
+                    "yPos": 0,
+                    "width": 20,
+                    "height": 20,
+                    "imageWidth": 20,
+                    "imageHeight": 20,
+                    "image": "theurgy:textures/gui/guide_book/categories/entry_completed.png"
+                },
+                {
+                    "type": "theurgy:itemstack",
+                    "xPos": 2,
+                    "yPos": 2,
+                    "item": {
+                        "id": "theurgy:theurgists_bench",
+                        "count": 1
+                    }
+                }
+            ],
+            "pages": [
+                {
+                    "type": "theurgy:composite",
+                    "renderables": [
+                        {
+                            "type": "theurgy:text",
+                            "xPos": 73,
+                            "yPos": 13,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "Theurgist's Bench",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:multiline_text",
+                            "xPos": 14,
+                            "yPos": 24,
+                            "maxWidth": 116,
+                            "maxRows": 110,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "After starting your research, you might have realized that the crafting table you're used to doesn't really cut it. Worry not, as there's a solution! \nIntroducing the Theurgist's Bench",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:itemstack",
+                            "xPos": 60,
+                            "yPos": 110,
+                            "item": {
+                                "id": "theurgy:theurgists_bench"
+                            }
+                        },
+                        {
+                            "type": "theurgy:multiline_text",
+                            "xPos": 14,
+                            "yPos": 130,
+                            "maxWidth": 116,
+                            "maxRows": 110,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "This new table can handle all the recipes your old table can, but also some more...",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:image",
+                            "xPos": 0,
+                            "yPos": 0,
+                            "width": 146,
+                            "height": 180,
+                            "imageWidth": 146,
+                            "imageHeight": 180,
+                            "image": "theurgy:textures/gui/guide_book/gb_page_first.png"
+                        },
+                        {
+                            "type": "theurgy:change_page_button",
+                            "xPos": 123,
+                            "yPos": 157,
+                            "width": 11,
+                            "height": 14,
+                            "nextPage": true,
+                            "layers": []
+                        }
+                    ]
+                },
+                {
+                    "type": "theurgy:composite",
+                    "renderables": [
+                        {
+                            "type": "theurgy:text",
+                            "xPos": 73,
+                            "yPos": 13,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "Theurgist's Bench",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:multiline_text",
+                            "xPos": 14,
+                            "yPos": 27,
+                            "maxWidth": 116,
+                            "maxRows": 110,
+                            "centered": true,
+                            "shadow": true,
+                            "text": {
+                                "text": "It can hold your items, and can both interact with crystallized and ambient mion!",
+                                "color": "black"
+                            }
+                        },
+                        {
+                            "type": "theurgy:crafting_recipe",
+                            "xPos": 45,
+                            "yPos": 62,
+                            "recipeId": "theurgy:theurgists_bench"
+                        },
+                        {
+                            "type": "theurgy:image",
+                            "xPos": 0,
+                            "yPos": 0,
+                            "width": 146,
+                            "height": 180,
+                            "imageWidth": 146,
+                            "imageHeight": 180,
+                            "image": "theurgy:textures/gui/guide_book/gb_page_last.png"
+                        },
+                        {
+                            "type": "theurgy:change_page_button",
+                            "xPos": 13,
+                            "yPos": 157,
+                            "width": 11,
+                            "height": 14,
+                            "nextPage": false,
+                            "layers": []
+                        },
+                        {
+                            "type": "theurgy:complete_research_button",
+                            "xPos": 50,
+                            "yPos": 157,
+                            "width": 60,
+                            "height": 12,
+                            "layers": [
+                                {
+                                    "type": "theurgy:image",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "width": 60,
+                                    "height": 12,
+                                    "imageWidth": 60,
+                                    "imageHeight": 12,
+                                    "image": "theurgy:textures/gui/guide_book/categories/c_button.png"
+                                },
+                                {
+                                    "type": "theurgy:text",
+                                    "xPos": 9,
+                                    "yPos": 2,
+                                    "centered": false,
+                                    "shadow": false,
+                                    "text": {
+                                        "text": "Complete",
+                                        "color": "black"
+                                    }
+                                }
+                            ],
+                            "research": [
+                                "theurgy:guidebook/main/theurgists_bench"
+                            ]
+                        },
+                        {
+                            "type": "theurgy:research_conditional",
+                            "xPos": 30,
+                            "yPos": 155,
+                            "research": [
+                                "theurgy:guidebook/main/theurgists_bench"
+                            ],
+                            "incomplete": [
+                                {
+                                    "type": "theurgy:itemstack",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "item": {
+                                        "id": "theurgy:theurgists_bench"
+                                    }
+                                }
+                            ],
+                            "complete": [
+                                {
+                                    "type": "theurgy:itemstack",
+                                    "xPos": 0,
+                                    "yPos": 0,
+                                    "item": {
+                                        "id": "theurgy:theurgists_bench"
+                                    }
+                                },
+                                {
+                                    "type": "theurgy:image",
+                                    "image": "minecraft:textures/gui/sprites/icon/checkmark.png",
+                                    "xPos": 8,
+                                    "yPos": -5,
+                                    "width": 9,
+                                    "height": 8,
+                                    "imageWidth": 9,
+                                    "imageHeight": 8
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

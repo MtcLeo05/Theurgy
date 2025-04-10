@@ -1,0 +1,6 @@
+{
+    "parent": "theurgy:block/geode_base",
+    "textures": {
+        "crystal": "theurgy:block/aer_geode"
+    }
+}

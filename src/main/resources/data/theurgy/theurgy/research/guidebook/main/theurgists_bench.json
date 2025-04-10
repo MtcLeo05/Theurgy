@@ -1,0 +1,11 @@
+{
+    "type": "theurgy:item",
+    "research": "theurgy:items",
+    "items": [
+        {
+            "id": "theurgy:theurgists_bench",
+            "count": 1
+        }
+    ],
+    "consume": false
+}

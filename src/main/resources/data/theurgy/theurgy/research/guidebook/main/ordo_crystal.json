@@ -1,0 +1,17 @@
+{
+    "type": "theurgy:item",
+    "research": "theurgy:items",
+    "items": [
+        {
+            "id": "theurgy:mion_crystal",
+            "count": 1,
+            "components": {
+                "theurgy:aspectus_holder": {
+                    "aspectus": "theurgy:ordo",
+                    "amount": 1
+                }
+            }
+        }
+    ],
+    "consume": false
+}
