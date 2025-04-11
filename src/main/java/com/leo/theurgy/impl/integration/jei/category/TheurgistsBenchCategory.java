@@ -29,7 +29,7 @@ public class TheurgistsBenchCategory implements IRecipeCategory<BaseTheurgistsBe
 
     public static final ResourceLocation BACKGROUND = TheurgyConstants.modLoc("textures/gui/container/jei/theurgists_bench.png");
     public static final ResourceLocation MISSING_RESEARCH = TheurgyConstants.modLoc("textures/gui/icons/missing_research.png");
-    public static final ResourceLocation SHAPELESS = TheurgyConstants.modLoc("textures/gui/bench_shapeless.png");
+    public static final ResourceLocation SHAPELESS = TheurgyConstants.modLoc("textures/gui/icons/bench_shapeless.png");
 
     public static final RecipeType<BaseTheurgistsBenchRecipe> RECIPE_TYPE = new RecipeType<>(UID, BaseTheurgistsBenchRecipe.class);
 
@@ -147,19 +147,23 @@ public class TheurgistsBenchCategory implements IRecipeCategory<BaseTheurgistsBe
             256
         );
 
-        guiGraphics.blit(
-            SHAPELESS,
-            getWidth() - 12,
-            4,
-            8,
-            8,
-            0,
-            0,
-            36,
-            36,
-            36,
-            36
-        );
+        if(recipe.isShapeless()) {
+            guiGraphics.blit(
+                SHAPELESS,
+                getWidth() - 12,
+                4,
+                8,
+                8,
+                0,
+                0,
+                36,
+                36,
+                36,
+                36
+            );
+        }
+
+
 
         guiGraphics.drawCenteredString(Minecraft.getInstance().font, String.valueOf(recipe.mion()), 131, 38, TheurgyConstants.MION_COLOR);
 

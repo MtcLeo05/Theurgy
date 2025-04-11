@@ -1,6 +1,5 @@
-package com.leo.theurgy.api.config;
+package com.leo.theurgy.impl.config;
 
-import com.leo.theurgy.impl.config.ConfigLoader;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.server.packs.resources.ResourceManagerReloadListener;
 import org.jetbrains.annotations.NotNull;

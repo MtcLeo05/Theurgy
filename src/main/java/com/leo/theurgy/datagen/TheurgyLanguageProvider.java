@@ -52,6 +52,7 @@ public class TheurgyLanguageProvider extends LanguageProvider {
         this.add("command." + TheurgyConstants.MODID + ".research.clear_all.success", "Successfully cleared research");
         this.add("command." + TheurgyConstants.MODID + ".guidebook.clear_all.success", "Successfully cleared guidebook progress");
         this.add("command." + TheurgyConstants.MODID + ".guidebook.unlock_all.success", "Successfully unlocked all guidebook progress");
+        this.add("command." + TheurgyConstants.MODID + ".knowledge.clear_all.success", "Successfully cleared all aspectus knowledge");
 
         this.add("gui." + TheurgyConstants.MODID + ".theurgists_bench.title", "Theurgist's Bench");
         this.add("gui." + TheurgyConstants.MODID + ".jei.missing_research", "Missing Research: %d");

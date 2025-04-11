@@ -7,6 +7,7 @@ import com.leo.theurgy.api.guidebook.GuideBookScreen;
 import com.leo.theurgy.api.guidebook.data.GuideBookReloadListener;
 import com.leo.theurgy.api.item.AspectusContainerRenderer;
 import com.leo.theurgy.impl.TheurgyConstants;
+import com.leo.theurgy.impl.client.gui.overlay.MionMeterHUD;
 import com.leo.theurgy.impl.client.gui.screen.TheurgistsBenchScreen;
 import com.leo.theurgy.impl.client.render.be.TheurgistsBenchBER;
 import com.leo.theurgy.impl.init.*;
@@ -111,5 +112,13 @@ public class ModBusClientEvents {
     @SubscribeEvent
     public static void registerClientReloadListeners(RegisterClientReloadListenersEvent event) {
         event.registerReloadListener(GuideBookReloadListener.getInstance());
+    }
+
+    @SubscribeEvent
+    public static void registerGuiLayers(RegisterGuiLayersEvent event) {
+        event.registerBelowAll(
+            TheurgyConstants.modLoc("mion_meter"),
+            new MionMeterHUD()
+        );
     }
 }

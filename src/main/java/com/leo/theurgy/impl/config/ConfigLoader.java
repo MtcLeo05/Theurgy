@@ -6,7 +6,6 @@ import com.google.gson.JsonSyntaxException;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
-import com.leo.theurgy.api.config.ChunkMionConfig;
 import com.leo.theurgy.api.util.MapUtil;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceKey;
@@ -41,8 +40,8 @@ public class ConfigLoader {
     public final boolean giveBook = true;
 
     @Expose
-    @SerializedName("debug")
-    public final boolean debug = true;
+    @SerializedName("scan_time")
+    public final int scanTime = 25;
 
     public void load() {
         Gson gson = new GsonBuilder()

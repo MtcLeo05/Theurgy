@@ -1,5 +1,6 @@
 package com.leo.theurgy.impl;
 
+import com.leo.theurgy.api.aspectus.mapper.holder.IAspectusMappingHolder;
 import com.leo.theurgy.api.data.aspectus.Aspectus;
 import com.leo.theurgy.api.client.renderable.JsonGuiRenderable;
 import com.leo.theurgy.api.guidebook.data.GuideBookCategory;
@@ -28,6 +29,9 @@ public class TheurgyConstants {
 
     public static final ResourceKey<Registry<Aspectus>> ASPECTUS_REGISTRY_KEY = ResourceKey.createRegistryKey(TheurgyConstants.modLoc("aspectus"));
     public static final ResourceKey<Registry<ResearchType>> RESEARCH_REGISTRY_KEY = ResourceKey.createRegistryKey(TheurgyConstants.modLoc("research"));
+    public static final ResourceKey<Registry<IAspectusMappingHolder>> ASPECTUS_MAPPING_REGISTRY_KEY = ResourceKey.createRegistryKey(TheurgyConstants.modLoc("aspectus_mapping"));
+
+    public static final ResourceKey<Registry<MapCodec<? extends IAspectusMappingHolder>>> MAPPING_TYPE_REGISTRY_KEY = ResourceKey.createRegistryKey(TheurgyConstants.modLoc("mapping_types"));
 
     public static final ResourceKey<Registry<MapCodec<? extends ResearchType>>> RESEARCH_TYPES_REGISTRY_KEY = ResourceKey.createRegistryKey(TheurgyConstants.modLoc("research_types"));
 
@@ -41,20 +45,22 @@ public class TheurgyConstants {
     public static ResourceLocation modLoc(String path) {
         return ResourceLocation.fromNamespaceAndPath(MODID, path);
     }
+
     public static ResourceLocation makeGuideBookEntry(ResourceLocation category, ResourceLocation entry) {
         return ResourceLocation.fromNamespaceAndPath(category.getNamespace(), category.getPath() + "/" + entry.getPath());
     }
+
     public static ResourceLocation makeGuideBookEntry(GuideBookCategory category, GuideBookEntry entry) {
         return TheurgyConstants.makeGuideBookEntry(category.id(), entry.id());
     }
 
-    public static int MION_COLOR = 0x99f8ff;
+    public static final int MION_COLOR = 0x99f8ff;
 
     public static ResourceLocation itemName(Item item) {
         return BuiltInRegistries.ITEM.getKey(item);
     }
 
-    public static List<DeferredHolder<Block, MionGeodeBlock>> WORLDGEN_CRYSTALS = ListUtil.of(
+    public static final List<DeferredHolder<Block, MionGeodeBlock>> WORLDGEN_CRYSTALS = ListUtil.of(
         TheurgyBlocks.IGNIS_GEODE,
         TheurgyBlocks.AER_GEODE,
         TheurgyBlocks.AQUA_GEODE,

@@ -2,10 +2,7 @@ package com.leo.theurgy.impl.event;
 
 import com.leo.theurgy.api.data.aspectus.Aspectus;
 import com.leo.theurgy.impl.TheurgyConstants;
-import com.leo.theurgy.impl.init.TheurgyBlockEntities;
-import com.leo.theurgy.impl.init.TheurgyGuideBookPageTypes;
-import com.leo.theurgy.impl.init.TheurgyJsonGuiRenderableTypes;
-import com.leo.theurgy.impl.init.TheurgyResearchTypes;
+import com.leo.theurgy.impl.init.*;
 import com.leo.theurgy.impl.world.biome.TheurgyTerrablender;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -31,6 +28,12 @@ public class ModBusEvents {
             TheurgyResearchTypes.RESEARCH_TYPE_CODEC,
             TheurgyResearchTypes.RESEARCH_TYPE_CODEC
         );
+
+        event.dataPackRegistry(
+            TheurgyConstants.ASPECTUS_MAPPING_REGISTRY_KEY,
+            TheurgyMappingTypes.MAPPING_TYPE_CODEC,
+            TheurgyMappingTypes.MAPPING_TYPE_CODEC
+        );
     }
 
     @SubscribeEvent
@@ -47,6 +50,7 @@ public class ModBusEvents {
         event.register(TheurgyResearchTypes.RESEARCH_TYPES_REGISTRY);
         event.register(TheurgyJsonGuiRenderableTypes.JSON_GUI_RENDERABLE_TYPES_REGISTRY);
         event.register(TheurgyGuideBookPageTypes.GUIDEBOOK_PAGE_TYPES_REGISTRY);
+        event.register(TheurgyMappingTypes.MAPPING_TYPES_REGISTRY);
     }
 
     @SubscribeEvent

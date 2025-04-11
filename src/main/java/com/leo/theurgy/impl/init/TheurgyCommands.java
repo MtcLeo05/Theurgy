@@ -2,6 +2,7 @@ package com.leo.theurgy.impl.init;
 
 import com.leo.theurgy.impl.TheurgyConstants;
 import com.leo.theurgy.impl.command.GuideBookCommand;
+import com.leo.theurgy.impl.command.KnowledgeCommand;
 import com.leo.theurgy.impl.command.ResearchCommand;
 import net.minecraft.commands.Commands;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -19,6 +20,7 @@ public class TheurgyCommands {
                     .literal(TheurgyConstants.MODID)
                     .then(ResearchCommand.register())
                     .then(GuideBookCommand.register())
+                    .then(KnowledgeCommand.register())
             );
     }
 }

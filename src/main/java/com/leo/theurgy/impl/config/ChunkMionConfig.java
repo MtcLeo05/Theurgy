@@ -1,4 +1,4 @@
-package com.leo.theurgy.api.config;
+package com.leo.theurgy.impl.config;
 
 import com.google.gson.annotations.Expose;
 

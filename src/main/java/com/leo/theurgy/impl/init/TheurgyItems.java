@@ -1,6 +1,7 @@
 package com.leo.theurgy.impl.init;
 
 import com.leo.theurgy.impl.TheurgyConstants;
+import com.leo.theurgy.impl.item.CrystalScannerItem;
 import com.leo.theurgy.impl.item.GuideBookItem;
 import com.leo.theurgy.impl.item.MionCrystalItem;
 import net.minecraft.world.item.Item;
@@ -20,6 +21,14 @@ public class TheurgyItems {
     public static final DeferredHolder<Item, Item> GUIDE_BOOK = ITEMS.register("guide_book",
         () -> new GuideBookItem(
             new Item.Properties()
+        )
+    );
+
+    public static final DeferredHolder<Item, Item> CRYSTAL_SCANNER = ITEMS.register("crystal_scanner",
+        () -> new CrystalScannerItem(
+            new Item.Properties()
+                .stacksTo(1)
+                .component(TheurgyDataComponents.SCAN_TIME, 0)
         )
     );
 }

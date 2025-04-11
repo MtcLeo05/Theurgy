@@ -1,7 +1,7 @@
 package com.leo.theurgy.api.data.mion;
 
 import com.google.gson.annotations.Expose;
-import com.leo.theurgy.api.config.ChunkMionConfig;
+import com.leo.theurgy.impl.config.ChunkMionConfig;
 import com.leo.theurgy.impl.TheurgyConstants;
 import com.leo.theurgy.impl.config.ConfigLoader;
 import com.leo.theurgy.impl.init.TheurgyAttachmentTypes;

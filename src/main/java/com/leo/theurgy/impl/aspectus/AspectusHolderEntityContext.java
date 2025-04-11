@@ -8,37 +8,37 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class AspectusHolderItemContext implements IAspectusHolderContext {
+public class AspectusHolderEntityContext implements IAspectusHolderContext {
 
-    private final ItemStack stack;
-    private final @Nullable Player holder;
+    private final Entity entity;
+    private final @Nullable Player player;
 
-    private AspectusHolderItemContext(@NotNull ItemStack stack, @Nullable Player holder){
-        this.stack = stack;
-        this.holder = holder;
+    private AspectusHolderEntityContext(@NotNull Entity entity, Player player){
+        this.entity = entity;
+        this.player = player;
     }
 
-    public static AspectusHolderItemContext create(@NotNull ItemStack stack, @Nullable Player holder) {
-        return new AspectusHolderItemContext(stack, holder);
+    public static AspectusHolderEntityContext create(@NotNull Entity entity, Player player) {
+        return new AspectusHolderEntityContext(entity, player);
     }
 
     @Override
     public @Nullable Entity entity() {
-        return player();
+        return entity;
     }
 
     @Override
     public @Nullable Player player() {
-        return holder;
+        return player;
     }
 
     @Override
     public @Nullable Level level() {
-        return holder != null? holder.level(): null;
+        return player.level();
     }
 
     @Override
     public @Nullable ItemStack stack() {
-        return stack;
+        return null;
     }
 }

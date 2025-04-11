@@ -5,11 +5,14 @@ import com.leo.theurgy.impl.TheurgyConstants;
 import com.leo.theurgy.impl.init.TheurgyBlocks;
 import com.leo.theurgy.impl.init.TheurgyDataComponents;
 import com.leo.theurgy.impl.init.TheurgyItems;
+import com.leo.theurgy.impl.recipe.ShapedTheurgistsBenchRecipe;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import net.neoforged.neoforge.common.crafting.CompoundIngredient;
 import net.neoforged.neoforge.common.crafting.DataComponentIngredient;
@@ -23,7 +26,6 @@ public class TheurgyRecipeProvider extends RecipeProvider implements IConditionB
 
     @Override
     protected void buildRecipes(RecipeOutput recipeOutput, HolderLookup.Provider holderLookup) {
-
         ItemStack aer = new ItemStack(TheurgyItems.MION_CRYSTAL);
         aer.set(TheurgyDataComponents.ASPECTUS_HOLDER, new AspectusHolder(TheurgyConstants.modLoc("aer"), 1));
         Ingredient aerIng = DataComponentIngredient.of(false, aer);
@@ -91,5 +93,20 @@ public class TheurgyRecipeProvider extends RecipeProvider implements IConditionB
             .define('L', TheurgyBlocks.STRIPPED_GREATWOOD_LOG.get())
             .unlockedBy("hasItem", has(TheurgyBlocks.STRIPPED_GREATWOOD_LOG.get()))
             .save(recipeOutput);
+
+        ShapedTheurgistsBenchRecipe.builder("misc", RecipeCategory.MISC)
+            .pattern("NGN")
+            .pattern("GTG")
+            .pattern("NGN")
+            .define('N', Items.GOLD_NUGGET)
+            .define('G', Items.GOLD_INGOT)
+            .define('T', Blocks.TINTED_GLASS)
+            .unlockedBy("hasItem", has(Blocks.TINTED_GLASS))
+            .withAspectus(1, 1, 1, 1, 1, 1)
+            .withMion(20)
+            .withResult(TheurgyItems.CRYSTAL_SCANNER.get().getDefaultInstance())
+            .save(recipeOutput);
+
+
     }
 }

@@ -4,7 +4,7 @@ import com.leo.theurgy.api.data.mion.ChunkMion;
 import com.leo.theurgy.api.data.player.PlayerData;
 import com.leo.theurgy.api.event.ChunkTickEvent;
 import com.leo.theurgy.impl.TheurgyConstants;
-import com.leo.theurgy.api.config.ConfigReloadListener;
+import com.leo.theurgy.impl.config.ConfigReloadListener;
 import com.leo.theurgy.impl.config.ConfigLoader;
 import com.leo.theurgy.impl.init.TheurgyAttachmentTypes;
 import com.leo.theurgy.impl.init.TheurgyItems;

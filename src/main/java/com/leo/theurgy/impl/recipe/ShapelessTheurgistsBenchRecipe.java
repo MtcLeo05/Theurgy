@@ -7,19 +7,27 @@ import com.leo.theurgy.impl.init.TheurgyRecipes;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementRequirements;
+import net.minecraft.advancements.AdvancementRewards;
+import net.minecraft.advancements.Criterion;
+import net.minecraft.advancements.critereon.RecipeUnlockedTrigger;
 import net.minecraft.core.NonNullList;
+import net.minecraft.data.recipes.RecipeBuilder;
+import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class ShapelessTheurgistsBenchRecipe extends BaseTheurgistsBenchRecipe {
     public ShapelessTheurgistsBenchRecipe(ItemStack result, List<Ingredient> inputs, int aer, int terra, int aqua, int ignis, int ordo, int perditio, int mion, List<ResourceLocation> research) {
@@ -120,6 +128,113 @@ public class ShapelessTheurgistsBenchRecipe extends BaseTheurgistsBenchRecipe {
         @Override
         public StreamCodec<RegistryFriendlyByteBuf, ShapelessTheurgistsBenchRecipe> streamCodec() {
             return STREAM_CODEC;
+        }
+    }
+
+    public static class Builder implements RecipeBuilder {
+        protected String group;
+        protected final RecipeCategory category;
+        private final Map<String, Criterion<?>> criteria = new LinkedHashMap<>();
+
+        protected ItemStack result;
+        protected List<Ingredient> inputs;
+        protected int aer, terra, aqua, ignis, ordo, perditio;
+        protected int mion;
+        protected List<ResourceLocation> research;
+
+        public Builder(String group, RecipeCategory category) {
+            this.group = group;
+            this.category = category;
+            inputs = NonNullList.withSize(9, Ingredient.EMPTY);
+            research = new ArrayList<>();
+        }
+
+        public Builder withResult(ItemStack result) {
+            this.result = result;
+            return this;
+        }
+
+        public Builder addInput(Ingredient input) {
+            int j = -1;
+
+            for (int i = 0; i < inputs.size(); i++) {
+                if (inputs.get(i).isEmpty()) j = i;
+            }
+
+            if (j == -1) return this;
+
+            inputs.set(j, input);
+            return this;
+        }
+
+        public Builder withAspectus(int aer, int terra, int aqua, int ignis, int ordo, int perditio) {
+            this.aer = aer;
+            this.terra = terra;
+            this.aqua = aqua;
+            this.ignis = ignis;
+            this.ordo = ordo;
+            this.perditio = perditio;
+
+            return this;
+        }
+
+        public Builder withMion(int mion) {
+            this.mion = mion;
+            return this;
+        }
+
+        public Builder unlockedBy(String name, Criterion<?> criterion) {
+            this.criteria.put(name, criterion);
+            return this;
+        }
+
+        public Builder addResearch(ResourceLocation research) {
+            this.research.add(research);
+            return this;
+        }
+
+        public Builder group(@Nullable String groupName) {
+            this.group = groupName;
+            return this;
+        }
+
+        @Override
+        public Item getResult() {
+            return result.getItem();
+        }
+
+        @Override
+        public void save(RecipeOutput recipeOutput, ResourceLocation id) {
+            this.ensureValid(id);
+            Advancement.Builder advancement$builder = recipeOutput.advancement()
+                .addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(id))
+                .rewards(AdvancementRewards.Builder.recipe(id))
+                .requirements(AdvancementRequirements.Strategy.OR);
+
+            this.criteria.forEach(advancement$builder::addCriterion);
+
+            this.inputs = this.inputs.stream().filter(s -> !s.isEmpty()).toList();
+
+            ShapelessTheurgistsBenchRecipe shapelessTheurgistsBenchRecipe = new ShapelessTheurgistsBenchRecipe(
+                this.result,
+                this.inputs,
+                aer,
+                terra,
+                aqua,
+                ignis,
+                ordo,
+                perditio,
+                mion,
+                this.research
+            );
+
+            recipeOutput.accept(id, shapelessTheurgistsBenchRecipe, advancement$builder.build(id.withPrefix("recipes/" + this.category.getFolderName() + "/")));
+        }
+
+        private void ensureValid(ResourceLocation id) {
+            if (this.criteria.isEmpty()) {
+                throw new IllegalStateException("No way of obtaining recipe " + id);
+            }
         }
     }
 }

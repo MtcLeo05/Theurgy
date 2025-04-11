@@ -34,20 +34,20 @@ public record ResearchProgress(List<ResourceLocation> completedResearch) {
     public static PlayerData clearResearch(ServerPlayer player) {
         PlayerData old = PlayerData.getOrCreate(player);
 
-        return new PlayerData(old.checkDelay(), old.maxCheckDelay(), new ResearchProgress(), old.guideBookEntries(), old.bookGiven());
+        return new PlayerData(old.checkDelay(), old.maxCheckDelay(), new ResearchProgress(), old.guideBookEntries(), old.bookGiven(), old.knowledge());
     }
 
-    public static PlayerData addResearch(PlayerData data, ResourceLocation research) {
-        List<ResourceLocation> completedResearch = ListUtil.mutable(data.researchProgress().completedResearch);
+    public static PlayerData addResearch(PlayerData old, ResourceLocation research) {
+        List<ResourceLocation> completedResearch = ListUtil.mutable(old.researchProgress().completedResearch);
         completedResearch.add(research);
 
-        return new PlayerData(data.checkDelay(),data.maxCheckDelay(), new ResearchProgress(completedResearch), data.guideBookEntries(), data.bookGiven());
+        return new PlayerData(old.checkDelay(),old.maxCheckDelay(), new ResearchProgress(completedResearch), old.guideBookEntries(), old.bookGiven(), old.knowledge());
     }
 
-    public static PlayerData addResearch(PlayerData data, List<ResourceLocation> research) {
-        List<ResourceLocation> completedResearch = ListUtil.mutable(data.researchProgress().completedResearch);
+    public static PlayerData addResearch(PlayerData old, List<ResourceLocation> research) {
+        List<ResourceLocation> completedResearch = ListUtil.mutable(old.researchProgress().completedResearch);
         completedResearch.addAll(research);
 
-        return new PlayerData(data.checkDelay(),data.maxCheckDelay(), new ResearchProgress(completedResearch), data.guideBookEntries(), data.bookGiven());
+        return new PlayerData(old.checkDelay(),old.maxCheckDelay(), new ResearchProgress(completedResearch), old.guideBookEntries(), old.bookGiven(), old.knowledge());
     }
 }

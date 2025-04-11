@@ -17,6 +17,7 @@ public class Theurgy {
         ConfigLoader.getInstance().load();
 
         TheurgyResearchTypes.RESEARCH_TYPES_REGISTER.register(modEventBus);
+        TheurgyMappingTypes.MAPPING_TYPES_REGISTER.register(modEventBus);
         TheurgyJsonGuiRenderableTypes.JSON_GUI_RENDERABLE_TYPES_REGISTER.register(modEventBus);
         TheurgyGuideBookPageTypes.GUIDEBOOK_PAGE_TYPES_REGISTER.register(modEventBus);
 

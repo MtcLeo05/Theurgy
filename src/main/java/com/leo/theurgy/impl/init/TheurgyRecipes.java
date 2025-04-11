@@ -2,6 +2,7 @@ package com.leo.theurgy.impl.init;
 
 import com.leo.theurgy.api.recipe.BaseTheurgistsBenchRecipe;
 import com.leo.theurgy.impl.TheurgyConstants;
+import com.leo.theurgy.impl.recipe.ShapedTheurgistsBenchRecipe;
 import com.leo.theurgy.impl.recipe.ShapelessTheurgistsBenchRecipe;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -23,6 +24,11 @@ public class TheurgyRecipes {
     public static final Supplier<RecipeSerializer<ShapelessTheurgistsBenchRecipe>> SHAPELESS_THEURGISTS_BENCH_SERIALIZER = RECIPE_SERIALIZERS.register(
         "shapeless_theurgists_bench",
         ShapelessTheurgistsBenchRecipe.Serializer::new
+    );
+
+    public static final Supplier<RecipeSerializer<ShapedTheurgistsBenchRecipe>> SHAPED_THEURGISTS_BENCH_SERIALIZER = RECIPE_SERIALIZERS.register(
+        "shaped_theurgists_bench",
+        ShapedTheurgistsBenchRecipe.Serializer::new
     );
 
 }

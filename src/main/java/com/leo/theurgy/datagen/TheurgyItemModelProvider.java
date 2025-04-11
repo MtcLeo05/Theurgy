@@ -20,6 +20,7 @@ public class TheurgyItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(TheurgyItems.MION_CRYSTAL);
         simpleItem(TheurgyItems.GUIDE_BOOK);
+        simpleItem(TheurgyItems.CRYSTAL_SCANNER);
 
         simpleBlockItem(TheurgyBlocks.GREATWOOD_SAPLING);
     }
