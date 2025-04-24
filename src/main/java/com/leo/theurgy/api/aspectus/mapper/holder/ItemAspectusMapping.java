@@ -45,15 +45,17 @@ public record ItemAspectusMapping(Map<ResourceLocation, Integer> aspectuses, Ite
     public Map<Aspectus, Integer> aspectuses(IAspectusHolderContext context) {
         Map<Aspectus, Integer> toRet = new HashMap<>();
 
-        if(context.stack() == null) return toRet;
-        if(!ItemStack.isSameItemSameComponents(context.stack(), item)) return toRet;
+        ItemStack item = context.stack();
+
+        if(item == null) return toRet;
+        if(!ItemStack.isSameItemSameComponents(item, this.item)) return toRet;
         if(context.level() == null) return toRet;
 
         Registry<Aspectus> aspectusRegistry = context.level().registryAccess().registryOrThrow(TheurgyConstants.ASPECTUS_REGISTRY_KEY);
 
         aspectuses.forEach((aspectusId, amount) -> {
             Aspectus aspectus = aspectusRegistry.get(aspectusId);
-            toRet.put(aspectus, amount);
+            toRet.put(aspectus, amount * item.getCount());
         });
 
         return toRet;

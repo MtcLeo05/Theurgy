@@ -2,6 +2,7 @@ package com.leo.theurgy.impl.init;
 
 import com.leo.theurgy.impl.TheurgyConstants;
 import com.leo.theurgy.impl.block.entity.TheurgistsBenchBE;
+import com.leo.theurgy.impl.block.entity.TheurgistsCauldronBE;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -15,6 +16,13 @@ public class TheurgyBlockEntities {
         () -> BlockEntityType.Builder.of(
             TheurgistsBenchBE::new,
             TheurgyBlocks.THEURGISTS_BENCH.get()
+        ).build(null)
+    );
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TheurgistsCauldronBE>> THEURGISTS_CAULDRON_BE = BLOCK_ENTITIES.register("theurgists_cauldron",
+        () -> BlockEntityType.Builder.of(
+            TheurgistsCauldronBE::new,
+            TheurgyBlocks.THEURGISTS_CAULDRON.get()
         ).build(null)
     );
 

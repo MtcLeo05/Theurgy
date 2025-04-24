@@ -1,4 +1,4 @@
-package com.leo.theurgy.impl.recipe;
+package com.leo.theurgy.impl.recipe.bench;
 
 import com.leo.theurgy.api.recipe.BaseTheurgistsBenchRecipe;
 import com.leo.theurgy.api.recipe.TheurgistsBenchRecipeInput;
@@ -47,11 +47,6 @@ public class ShapelessTheurgistsBenchRecipe extends BaseTheurgistsBenchRecipe {
     @Override
     public RecipeSerializer<?> getSerializer() {
         return TheurgyRecipes.SHAPELESS_THEURGISTS_BENCH_SERIALIZER.get();
-    }
-
-    @Override
-    public List<ResourceLocation> neededResearch() {
-        return this.research;
     }
 
     public List<ResourceLocation> getResearch() {
@@ -228,7 +223,7 @@ public class ShapelessTheurgistsBenchRecipe extends BaseTheurgistsBenchRecipe {
                 this.research
             );
 
-            recipeOutput.accept(id, shapelessTheurgistsBenchRecipe, advancement$builder.build(id.withPrefix("recipes/" + this.category.getFolderName() + "/")));
+            recipeOutput.accept(id, shapelessTheurgistsBenchRecipe, advancement$builder.build(id.withPrefix("recipes/theurgists_bench/shapeless/" + this.category.getFolderName() + "/")));
         }
 
         private void ensureValid(ResourceLocation id) {

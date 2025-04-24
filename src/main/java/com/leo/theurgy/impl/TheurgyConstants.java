@@ -11,6 +11,8 @@ import com.leo.theurgy.api.research.ResearchType;
 import com.leo.theurgy.api.util.ListUtil;
 import com.leo.theurgy.impl.block.MionGeodeBlock;
 import com.leo.theurgy.impl.init.TheurgyBlocks;
+import com.leo.theurgy.impl.recipe.cauldron.TheurgistsCauldronHeatRecipe;
+import com.leo.theurgy.impl.recipe.cauldron.TheurgistsCauldronRecipe;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -39,6 +41,8 @@ public class TheurgyConstants {
     public static final ResourceKey<Registry<MapCodec<? extends GuideBookPage>>> GUIDEBOOK_PAGE_RENDERABLE_TYPES_REGISTRY_KEY = ResourceKey.createRegistryKey(TheurgyConstants.modLoc("guidebook_page"));
 
     public static final RecipeType<BaseTheurgistsBenchRecipe> THEURGISTS_BENCH_RECIPE_TYPE = RecipeType.simple(TheurgyConstants.modLoc("theurgists_bench"));
+    public static final RecipeType<TheurgistsCauldronRecipe> THEURGISTS_CAULDRON_RECIPE_TYPE = RecipeType.simple(TheurgyConstants.modLoc("theurgists_cauldron"));
+    public static final RecipeType<TheurgistsCauldronHeatRecipe> THEURGISTS_CAULDRON_HEAT_RECIPE_TYPE = RecipeType.simple(TheurgyConstants.modLoc("theurgists_cauldron_heat"));
 
     public static final ResourceLocation JEI_PLUGIN_ID = modLoc("jei_plugin");
     
@@ -59,13 +63,4 @@ public class TheurgyConstants {
     public static ResourceLocation itemName(Item item) {
         return BuiltInRegistries.ITEM.getKey(item);
     }
-
-    public static final List<DeferredHolder<Block, MionGeodeBlock>> WORLDGEN_CRYSTALS = ListUtil.of(
-        TheurgyBlocks.IGNIS_GEODE,
-        TheurgyBlocks.AER_GEODE,
-        TheurgyBlocks.AQUA_GEODE,
-        TheurgyBlocks.TERRA_GEODE,
-        TheurgyBlocks.ORDO_GEODE,
-        TheurgyBlocks.PERDITIO_GEODE
-    );
 }

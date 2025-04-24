@@ -12,14 +12,20 @@ public class AspectusHolderItemContext implements IAspectusHolderContext {
 
     private final ItemStack stack;
     private final @Nullable Player holder;
+    private final @Nullable Level level;
 
-    private AspectusHolderItemContext(@NotNull ItemStack stack, @Nullable Player holder){
+    private AspectusHolderItemContext(@NotNull ItemStack stack, @Nullable Player holder, @Nullable Level level){
         this.stack = stack;
         this.holder = holder;
+        this.level = level;
     }
 
     public static AspectusHolderItemContext create(@NotNull ItemStack stack, @Nullable Player holder) {
-        return new AspectusHolderItemContext(stack, holder);
+        return new AspectusHolderItemContext(stack, holder, null);
+    }
+
+    public static AspectusHolderItemContext create(@NotNull ItemStack stack, @Nullable Level level) {
+        return new AspectusHolderItemContext(stack, null, level);
     }
 
     @Override
@@ -34,7 +40,7 @@ public class AspectusHolderItemContext implements IAspectusHolderContext {
 
     @Override
     public @Nullable Level level() {
-        return holder != null? holder.level(): null;
+        return holder != null? holder.level(): level;
     }
 
     @Override

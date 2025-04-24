@@ -5,6 +5,8 @@ import com.leo.theurgy.impl.TheurgyConstants;
 import com.leo.theurgy.impl.block.AspectusOreBlock;
 import com.leo.theurgy.impl.block.MionGeodeBlock;
 import com.leo.theurgy.impl.block.TheurgistsBenchBlock;
+import com.leo.theurgy.impl.block.TheurgistsCauldronBlock;
+import com.leo.theurgy.impl.client.render.be.TheurgistsCauldronBER;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.EntityType;
@@ -28,12 +30,24 @@ public class TheurgyBlocks {
     public static DeferredHolder<Block, TheurgistsBenchBlock> THEURGISTS_BENCH = registerBlock("theurgists_bench",
         () -> new TheurgistsBenchBlock(
             BlockBehaviour.Properties.of()
-                .mapColor(MapColor.DEEPSLATE)
-                .sound(SoundType.DEEPSLATE)
+                .mapColor(MapColor.WOOD)
+                .sound(SoundType.WOOD)
                 .strength(3f)
                 .requiresCorrectToolForDrops()
         )
     );
+
+    public static DeferredHolder<Block, TheurgistsCauldronBlock> THEURGISTS_CAULDRON = registerBlock("theurgists_cauldron",
+        () -> new TheurgistsCauldronBlock(
+            BlockBehaviour.Properties.of()
+                .mapColor(MapColor.METAL)
+                .sound(SoundType.METAL)
+                .strength(2f)
+                .requiresCorrectToolForDrops()
+        )
+    );
+
+    // region Wood Stuff
 
     public static DeferredHolder<Block, RotatedPillarBlock> STRIPPED_GREATWOOD_LOG = registerBlock("stripped_greatwood_log", () ->
         new RotatedPillarBlock(
@@ -140,6 +154,9 @@ public class TheurgyBlocks {
         )
     );
 
+    // endregion
+
+    // region Worldgen Stuff
     public static DeferredHolder<Block, MionGeodeBlock> IGNIS_GEODE = makeGeode("ignis");
     public static DeferredHolder<Block, MionGeodeBlock> AQUA_GEODE = makeGeode("aqua");
     public static DeferredHolder<Block, MionGeodeBlock> TERRA_GEODE = makeGeode("terra");
@@ -159,6 +176,10 @@ public class TheurgyBlocks {
     public static DeferredHolder<Block, AspectusOreBlock> DEEPSLATE_ORDO_ORE = makeOre("ordo", ORDO_GEODE, true);
     public static DeferredHolder<Block, AspectusOreBlock> PERDITIO_ORE = makeOre("perditio", PERDITIO_GEODE, false);
     public static DeferredHolder<Block, AspectusOreBlock> DEEPSLATE_PERDITIO_ORE = makeOre("perditio", PERDITIO_GEODE, true);
+
+    // endregion
+
+    // region Methods
 
     public static DeferredHolder<Block, MionGeodeBlock> makeGeode(String aspectus) {
         return registerBlock(aspectus + "_geode", () ->
@@ -202,4 +223,6 @@ public class TheurgyBlocks {
     private static <T extends Block> void registerBlockItem(String name, DeferredHolder<Block, T> block, Rarity rarity) {
         TheurgyItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().rarity(rarity)));
     }
+
+    // endregion
 }

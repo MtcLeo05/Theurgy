@@ -1,4 +1,4 @@
-package com.leo.theurgy.impl.recipe;
+package com.leo.theurgy.impl.recipe.bench;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -18,7 +18,6 @@ import net.minecraft.core.NonNullList;
 import net.minecraft.data.recipes.RecipeBuilder;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
@@ -28,7 +27,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.ShapedRecipe;
 import net.minecraft.world.item.crafting.ShapedRecipePattern;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
@@ -60,11 +58,6 @@ public class ShapedTheurgistsBenchRecipe extends BaseTheurgistsBenchRecipe {
         return TheurgyRecipes.SHAPED_THEURGISTS_BENCH_SERIALIZER.get();
     }
 
-    @Override
-    public List<ResourceLocation> neededResearch() {
-        return this.research;
-    }
-
     public List<ResourceLocation> getResearch() {
         return this.neededResearch();
     }
@@ -85,7 +78,7 @@ public class ShapedTheurgistsBenchRecipe extends BaseTheurgistsBenchRecipe {
             cont = test.test(inputItems.get(i));
         }
 
-        return true;
+        return cont;
     }
 
     public ShapedRecipePattern pattern() {
@@ -262,7 +255,7 @@ public class ShapedTheurgistsBenchRecipe extends BaseTheurgistsBenchRecipe {
                 this.research
             );
 
-            recipeOutput.accept(id, shapedTheurgistsBenchRecipe, advancement$builder.build(id.withPrefix("recipes/" + this.category.getFolderName() + "/")));
+            recipeOutput.accept(id, shapedTheurgistsBenchRecipe, advancement$builder.build(id.withPrefix("recipes/theurgists_bench/shaped/" + this.category.getFolderName() + "/")));
         }
 
         private ShapedRecipePattern ensureValid(ResourceLocation loaction) {

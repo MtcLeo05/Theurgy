@@ -1,6 +1,7 @@
 package com.leo.theurgy.impl.event;
 
 
+import com.leo.theurgy.api.client.AspectusAtlasHolder;
 import com.leo.theurgy.api.data.aspectus.Aspectus;
 import com.leo.theurgy.api.data.aspectus.AspectusHolder;
 import com.leo.theurgy.api.guidebook.GuideBookScreen;
@@ -10,6 +11,7 @@ import com.leo.theurgy.impl.TheurgyConstants;
 import com.leo.theurgy.impl.client.gui.overlay.MionMeterHUD;
 import com.leo.theurgy.impl.client.gui.screen.TheurgistsBenchScreen;
 import com.leo.theurgy.impl.client.render.be.TheurgistsBenchBER;
+import com.leo.theurgy.impl.client.render.be.TheurgistsCauldronBER;
 import com.leo.theurgy.impl.init.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientPacketListener;
@@ -30,6 +32,8 @@ import java.util.Optional;
 
 @EventBusSubscriber(modid = TheurgyConstants.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ModBusClientEvents {
+
+    public static AspectusAtlasHolder ASPECTUS_ATLAS;
 
     @SubscribeEvent
     public static void registerItemColorHandlersEvent(RegisterColorHandlersEvent.Item event) {
@@ -107,11 +111,15 @@ public class ModBusClientEvents {
     @SubscribeEvent
     public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(TheurgyBlockEntities.THEURGISTS_BENCH_BE.get(), TheurgistsBenchBER::new);
+        event.registerBlockEntityRenderer(TheurgyBlockEntities.THEURGISTS_CAULDRON_BE.get(), TheurgistsCauldronBER::new);
     }
 
     @SubscribeEvent
     public static void registerClientReloadListeners(RegisterClientReloadListenersEvent event) {
         event.registerReloadListener(GuideBookReloadListener.getInstance());
+
+        ASPECTUS_ATLAS = new AspectusAtlasHolder(Minecraft.getInstance().getTextureManager());
+        event.registerReloadListener(ASPECTUS_ATLAS);
     }
 
     @SubscribeEvent

@@ -2,8 +2,10 @@ package com.leo.theurgy.impl.init;
 
 import com.leo.theurgy.api.recipe.BaseTheurgistsBenchRecipe;
 import com.leo.theurgy.impl.TheurgyConstants;
-import com.leo.theurgy.impl.recipe.ShapedTheurgistsBenchRecipe;
-import com.leo.theurgy.impl.recipe.ShapelessTheurgistsBenchRecipe;
+import com.leo.theurgy.impl.recipe.cauldron.TheurgistsCauldronHeatRecipe;
+import com.leo.theurgy.impl.recipe.cauldron.TheurgistsCauldronRecipe;
+import com.leo.theurgy.impl.recipe.bench.ShapedTheurgistsBenchRecipe;
+import com.leo.theurgy.impl.recipe.bench.ShapelessTheurgistsBenchRecipe;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -31,4 +33,23 @@ public class TheurgyRecipes {
         ShapedTheurgistsBenchRecipe.Serializer::new
     );
 
+    public static final Supplier<RecipeType<TheurgistsCauldronRecipe>> THEURGISTS_CAULDRON_TYPE = RECIPE_TYPES.register(
+        "theurgists_cauldron",
+        () -> TheurgyConstants.THEURGISTS_CAULDRON_RECIPE_TYPE
+    );
+
+    public static final Supplier<RecipeSerializer<TheurgistsCauldronRecipe>> THEURGISTS_CAULDRON_SERIALIZER = RECIPE_SERIALIZERS.register(
+        "theurgists_cauldron",
+        TheurgistsCauldronRecipe.Serializer::new
+    );
+
+    public static final Supplier<RecipeType<TheurgistsCauldronHeatRecipe>> THEURGISTS_CAULDRON_HEAT_TYPE = RECIPE_TYPES.register(
+        "theurgists_cauldron_heat",
+        () -> TheurgyConstants.THEURGISTS_CAULDRON_HEAT_RECIPE_TYPE
+    );
+
+    public static final Supplier<RecipeSerializer<TheurgistsCauldronHeatRecipe>> THEURGISTS_CAULDRON_HEAT_SERIALIZER = RECIPE_SERIALIZERS.register(
+        "theurgists_cauldron_heat",
+        TheurgistsCauldronHeatRecipe.Serializer::new
+    );
 }

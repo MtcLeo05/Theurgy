@@ -1,5 +1,6 @@
 package com.leo.theurgy.impl.event;
 
+import com.leo.theurgy.api.capability.TheurgyCapabilities;
 import com.leo.theurgy.api.data.aspectus.Aspectus;
 import com.leo.theurgy.impl.TheurgyConstants;
 import com.leo.theurgy.impl.init.*;
@@ -42,6 +43,18 @@ public class ModBusEvents {
             Capabilities.ItemHandler.BLOCK,
             TheurgyBlockEntities.THEURGISTS_BENCH_BE.get(),
             ((o, direction) -> o.getInventory())
+        );
+
+        event.registerBlockEntity(
+            TheurgyCapabilities.ASPECTUS_BLOCK,
+            TheurgyBlockEntities.THEURGISTS_CAULDRON_BE.get(),
+            ((o, direction) -> o.getAspectusStorage())
+        );
+
+        event.registerBlockEntity(
+            Capabilities.FluidHandler.BLOCK,
+            TheurgyBlockEntities.THEURGISTS_CAULDRON_BE.get(),
+            ((o, direction) -> o.getFluidTank())
         );
     }
 

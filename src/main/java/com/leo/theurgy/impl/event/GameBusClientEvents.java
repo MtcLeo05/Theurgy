@@ -123,7 +123,9 @@ public class GameBusClientEvents {
 
     @SubscribeEvent
     public static void renderAspectuses(RenderTooltipEvent.Pre event) {
-        ItemStack item = event.getItemStack();
+        if(Minecraft.getInstance().player == null) return;
+
+        ItemStack item = event.getItemStack().copyWithCount(1);
 
         if(!PlayerData.getOrCreateClient().scannedItem(item)) return;
 

@@ -32,6 +32,7 @@ public class TheurgyLanguageProvider extends LanguageProvider {
 
         List<Item> toIgnore = List.of(
             TheurgyBlocks.THEURGISTS_BENCH.get().asItem(),
+            TheurgyBlocks.THEURGISTS_CAULDRON.get().asItem(),
             TheurgyItems.MION_CRYSTAL.get()
         );
 
@@ -47,6 +48,7 @@ public class TheurgyLanguageProvider extends LanguageProvider {
 
         this.add(TheurgyItems.MION_CRYSTAL.get(), "Mion Crystal");
         this.add(TheurgyBlocks.THEURGISTS_BENCH.get(), "Theurgist's Bench");
+        this.add(TheurgyBlocks.THEURGISTS_CAULDRON.get(), "Theurgist's Cauldron");
 
 
         this.add("command." + TheurgyConstants.MODID + ".research.clear_all.success", "Successfully cleared research");

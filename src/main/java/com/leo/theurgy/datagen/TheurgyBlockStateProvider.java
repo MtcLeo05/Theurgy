@@ -27,6 +27,7 @@ public class TheurgyBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         simpleHorizontalBlockWithItem(TheurgyBlocks.THEURGISTS_BENCH);
+        simpleBlockWithItem(TheurgyBlocks.THEURGISTS_CAULDRON);
 
         logBlock(TheurgyBlocks.GREATWOOD_LOG.get());
         simpleBlockItem(TheurgyBlocks.GREATWOOD_LOG);

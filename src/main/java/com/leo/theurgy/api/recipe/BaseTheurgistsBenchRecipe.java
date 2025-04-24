@@ -1,24 +1,12 @@
 package com.leo.theurgy.api.recipe;
 
 import com.leo.theurgy.impl.TheurgyConstants;
-import com.leo.theurgy.impl.recipe.ShapelessTheurgistsBenchRecipe;
-import net.minecraft.advancements.Advancement;
-import net.minecraft.advancements.AdvancementRequirements;
-import net.minecraft.advancements.AdvancementRewards;
-import net.minecraft.advancements.Criterion;
-import net.minecraft.advancements.critereon.RecipeUnlockedTrigger;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.NonNullList;
-import net.minecraft.data.recipes.RecipeBuilder;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraft.world.level.Level;
 
 import java.util.*;
 
@@ -65,6 +53,11 @@ public abstract class BaseTheurgistsBenchRecipe implements Recipe<TheurgistsBenc
 
     public List<Ingredient> inputs() {
         return inputs;
+    }
+
+    @Override
+    public List<ResourceLocation> neededResearch() {
+        return this.research;
     }
 
     public int aer() {

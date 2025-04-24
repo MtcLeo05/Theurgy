@@ -54,7 +54,9 @@ public class TheurgyBlockTagsProvider extends BlockTagsProvider {
                 TheurgyBlocks.ORDO_ORE.get(),
                 TheurgyBlocks.DEEPSLATE_ORDO_ORE.get(),
                 TheurgyBlocks.PERDITIO_ORE.get(),
-                TheurgyBlocks.DEEPSLATE_PERDITIO_ORE.get()
+                TheurgyBlocks.DEEPSLATE_PERDITIO_ORE.get(),
+
+                TheurgyBlocks.THEURGISTS_CAULDRON.get()
             );
 
         this.tag(GREATWOOD_LOGS)

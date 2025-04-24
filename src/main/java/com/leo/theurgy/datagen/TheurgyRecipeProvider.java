@@ -5,7 +5,11 @@ import com.leo.theurgy.impl.TheurgyConstants;
 import com.leo.theurgy.impl.init.TheurgyBlocks;
 import com.leo.theurgy.impl.init.TheurgyDataComponents;
 import com.leo.theurgy.impl.init.TheurgyItems;
-import com.leo.theurgy.impl.recipe.ShapedTheurgistsBenchRecipe;
+import com.leo.theurgy.impl.recipe.cauldron.TheurgistsCauldronHeatRecipe;
+import com.leo.theurgy.impl.recipe.cauldron.TheurgistsCauldronRecipe;
+import com.leo.theurgy.impl.recipe.bench.ShapedTheurgistsBenchRecipe;
+import net.minecraft.advancements.critereon.BlockPredicate;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -13,9 +17,13 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CampfireBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Fluids;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import net.neoforged.neoforge.common.crafting.CompoundIngredient;
 import net.neoforged.neoforge.common.crafting.DataComponentIngredient;
+import net.neoforged.neoforge.fluids.FluidStack;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -105,8 +113,28 @@ public class TheurgyRecipeProvider extends RecipeProvider implements IConditionB
             .withAspectus(1, 1, 1, 1, 1, 1)
             .withMion(20)
             .withResult(TheurgyItems.CRYSTAL_SCANNER.get().getDefaultInstance())
-            .save(recipeOutput);
+            .save(recipeOutput, TheurgyConstants.modLoc("theurgists_bench/shaped/crystal_scanner"));
 
+        BlockPredicate cauldron = BlockPredicate.Builder.block()
+            .of(Blocks.CAMPFIRE)
+            .setProperties(StatePropertiesPredicate.Builder.properties()
+                .hasProperty(CampfireBlock.LIT, true))
+            .build();
 
+        TheurgistsCauldronHeatRecipe.builder("misc", RecipeCategory.MISC)
+            .withBlock(cauldron)
+            .withHeat(5)
+            .unlockedBy("hasItem", has(Blocks.CAMPFIRE))
+            .save(recipeOutput, TheurgyConstants.modLoc("theurgists_cauldron/heat/campfire"));
+
+        TheurgistsCauldronRecipe.builder("misc", RecipeCategory.MISC)
+            .withInput(Items.IRON_INGOT.getDefaultInstance())
+            .withResult(Items.DIAMOND.getDefaultInstance())
+            .addAspectus(TheurgyConstants.modLoc("ignis"), 5)
+            .withHeat(3)
+            .withStrictHeat(false)
+            .withFluid(new FluidStack(Fluids.WATER, 250))
+            .unlockedBy("hasItem", has(Items.IRON_INGOT))
+            .save(recipeOutput, TheurgyConstants.modLoc("theurgists_cauldron/diamond"));
     }
 }
